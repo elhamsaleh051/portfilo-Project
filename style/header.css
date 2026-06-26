@@ -1,0 +1,28 @@
+.header-container {
+  background-color: #1a0b2e;
+  color: aliceblue;
+  width: 100%;
+  height: 113px;
+  display: flex;
+  font-family: "Plus Jakarta Sans";
+}
+.header-content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar .nav {
+  list-style: none;
+  display: flex;
+  gap: 168px;
+}
+.nav li {
+  display: inline-block;
+  height: 100%;
+}
+.nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
