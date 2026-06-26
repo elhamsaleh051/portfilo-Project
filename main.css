@@ -19,3 +19,15 @@
   font-family: "Poppins";
   src: url("fonts/Poppins/Poppins-Regular.ttf") format("truetype");
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #11071f;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
