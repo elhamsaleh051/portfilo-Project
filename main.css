@@ -31,3 +31,74 @@ body {
   width: 60%;
   margin: 0 auto;
 }
+.Work-experience {
+  color: #fff;
+  font-family: "Preahvihear";
+  padding: 100px 0;
+  background: #763cac;
+  background: radial-gradient(
+    circle,
+    rgba(118, 60, 172, 1) 0%,
+    rgba(140, 121, 184, 0) 50%
+  );
+}
+.Work-experience h2 {
+  margin-bottom: 44px;
+}
+main .Work-experience-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.Work-experience-cards .experience-card {
+  background: #130428;
+  background: linear-gradient(
+    350deg,
+    rgba(19, 4, 40, 1) 0%,
+    rgba(56, 18, 109, 0) 17%,
+    rgba(56, 18, 109, 1) 45%,
+    rgba(38, 16, 69, 1) 70%,
+    rgba(25, 6, 52, 1) 90%
+  );
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #693b93;
+  /* padding-bottom: 24px ; */
+  border-radius: 10px;
+}
+.experience-card .experience-pic {
+  padding: 20px 8px 17px 10px;
+}
+.experience-card .experience-text{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+}
+.experience-card .experience-text h5 {
+  font-family: Poppins;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32.5px;
+  letter-spacing: 0%;
+}
+.experience-card .experience-text p {
+  font-family: Poppins;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 10.5px;
+  letter-spacing: 0%;
+}
+.Work-experience .experience-text .btn {
+  background-color: #2c1250;
+  border: 1px solid #693b93;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 23px 10px 10px;
+  margin-top: 10px;
+}
