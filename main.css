@@ -139,4 +139,34 @@ main .Work-experience-cards {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.team-skills-box .team-skills .item::after{
+  content: '';
+  position: absolute;
+  top: 40px;
+}
+.team-skills-box .team-skills .line1::after{
+content: url("images/line1.svg");
+left: 30px;
+}
+.team-skills-box .team-skills .line2::after{
+content: url("images/line2.svg");
+left: 30px;
+}
+.team-skills-box .team-skills .line3::after{
+content: url("images/line3.svg");
+left: 30px;
+}
+.team-skills-box .team-skills .line4::after{
+content: url("images/line4.svg");
+left: -10px;
+}
+.team-skills-box .team-skills .line5::after{
+content: url("images/line5.svg");
+right: 30px;
+}
+.team-skills-box .team-skills .line6::after{
+content: url("images/line6.svg");
+right: 30px;
 }
