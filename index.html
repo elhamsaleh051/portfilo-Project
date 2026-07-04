@@ -141,27 +141,10 @@
                     </div>
                 </div>
             </section>
-            <!-- <section class="example-project-section right">
-                <div class="example-content">
-                    <div class="example-project-image">
-                        <img src="images/Mask group.svg" alt="">
-                    </div>
-                    <div class="example-project-text">
-                        <p class="subtitle">Featured Project</p>
-                        <h3 class="title">Example Project</h3>
-                        <div class="blur-card">
-                            A web app for visualizing personalized Spotify data. View your
-                            top artists, top tracks, recently played tracks, and detailed audio
-                            information about each track. Create and save new playlists of
-                            recommended tracks based on your existing playlists and more.
-                        </div>
-                    </div>
 
-                </div>
-            </section> -->
         </div>
     </main>
-
+<div id="footer"></div>
     <script>
         async function loadComponent(id, file) {
             const res = await fetch(`components/${file}`);
@@ -170,6 +153,7 @@
         }
         loadComponent('header', 'header.html');
         loadComponent('banner', 'banner.html');
+        loadComponent('footer', 'footer.html');
     </script>
 </body>
 
