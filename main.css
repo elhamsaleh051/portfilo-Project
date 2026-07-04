@@ -141,36 +141,126 @@ main .Work-experience-cards {
   justify-content: center;
   position: relative;
 }
-.team-skills-box .team-skills .item::after{
-  content: '';
+.team-skills-box .team-skills .item::after {
+  content: "";
   position: absolute;
   top: 40px;
 }
-.team-skills-box .team-skills .line1::after{
-content: url("images/line1.svg");
-left: 30px;
+.team-skills-box .team-skills .line1::after {
+  content: url("images/line1.svg");
+  left: 30px;
 }
-.team-skills-box .team-skills .line2::after{
-content: url("images/line2.svg");
-left: 30px;
+.team-skills-box .team-skills .line2::after {
+  content: url("images/line2.svg");
+  left: 30px;
 }
-.team-skills-box .team-skills .line3::after{
-content: url("images/line3.svg");
-left: 30px;
+.team-skills-box .team-skills .line3::after {
+  content: url("images/line3.svg");
+  left: 30px;
 }
-.team-skills-box .team-skills .line4::after{
-content: url("images/line4.svg");
-left: -10px;
+.team-skills-box .team-skills .line4::after {
+  content: url("images/line4.svg");
+  left: -10px;
 }
-.team-skills-box .team-skills .line5::after{
-content: url("images/line5.svg");
-right: 30px;
+.team-skills-box .team-skills .line5::after {
+  content: url("images/line5.svg");
+  right: 30px;
 }
-.team-skills-box .team-skills .line6::after{
-content: url("images/line6.svg");
-right: 30px;
+.team-skills-box .team-skills .line6::after {
+  content: url("images/line6.svg");
+  right: 30px;
 }
-.logo-circle-box{
+.logo-circle-box {
   margin-top: 40px;
- padding-top: 150px;
+  padding-top: 150px;
+}
+
+/* example-project-section style */
+.example-project-section {
+  padding: 120px 0;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(images/Gradient.svg) no-repeat right;
+  background-size: contain;
+}
+.example-content {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.example-project-text {
+  color: #ccd6f6;
+  font-family: Poppins;
+  width: 500px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.left .example-project-text {
+  align-items: start;
+}
+.example-project-text .subtitle {
+  color: #9857d3;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 2%;
+}
+.example-project-text .title {
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: 2%;
+}
+.example-project-image {
+  width: 582px;
+  position: relative;
+  z-index: 1;
+  background-color: #2b0b3a;
+  border-radius: 10px;
+}
+.example-project-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+.example-project-text .blur-card {
+  width: 669px;
+  padding: 20px 15px;
+  background: url("images/Card.svg") no-repeat center;
+  background: radial-gradient(
+    circle,
+    #683b933d 100%,
+    #6ebef467 22%,
+    #468fd459 0%
+  );
+  backdrop-filter: blur(80px);
+  border-radius: 10px;
+  /* line-height: 1.8; */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  position: relative;
+  left: 0px;
+  margin-top: 20px;
+}
+.flower-icon {
+  margin-top: 20px;
+}
+.right {
+  background: url(images/Gradient.svg) no-repeat left;
+  background-size: contain;
+  margin-top: 20px;
+}
+.right .example-content {
+  grid-template-columns: 1fr 2fr;
+}
+.right .example-project-text {
+  align-items: end;
+}
+.right .example-project-text {
+  order: 2;
+  text-align: end;
 }
