@@ -105,7 +105,7 @@ position: absolute;
 }
 @media (max-width:768px) {
   .container{
-    width: 90%;
+    width: 90% !important;
   }
   .row{
     flex-direction: column;
@@ -113,5 +113,9 @@ position: absolute;
   .p2{
     font-size: 44px;
     margin-bottom: 10px;
+  }
+  .speech_bubble{
+     top: 100px;
+  left: 450px;
   }
 }
