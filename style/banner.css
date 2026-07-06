@@ -103,3 +103,15 @@ position: absolute;
   font-size: 22px;
   font-weight: 400;
 }
+@media (max-width:768px) {
+  .container{
+    width: 90%;
+  }
+  .row{
+    flex-direction: column;
+  }
+  .p2{
+    font-size: 44px;
+    margin-bottom: 10px;
+  }
+}
