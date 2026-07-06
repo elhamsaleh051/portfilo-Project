@@ -61,6 +61,7 @@ main .Work-experience-cards {
     rgba(38, 16, 69, 1) 70%,
     rgba(25, 6, 52, 1) 90%
   );
+  box-shadow: 4px 7px 26px 0 #0000001f;
   display: flex;
   align-items: center;
   border-top: 2px solid #693b93;
@@ -265,4 +266,31 @@ main .Work-experience-cards {
   order: 2;
   text-align: end;
 }
-/* foote */
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-card .experience-pic img {
+    width: 80px;
+    margin: 5px;
+  }
+  .experience-card .experience-text h5 {
+    font-size: 18px;
+  }
+  .experience-card .experience-text p {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .experience-card .experience-text a.btn {
+    padding: 8px 16px;
+  }
+   .logo-circle-box img{
+    width: 550px;
+  }
+}
+@media (max-width: 425px) {
+  main .Work-experience-cards {
+    grid-template-columns: auto;
+  }
+  .logo-circle-box img{
+    width: 350px;
+  }
+}
