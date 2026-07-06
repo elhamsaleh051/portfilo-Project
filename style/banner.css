@@ -105,7 +105,7 @@ position: absolute;
 }
 @media (max-width:768px) {
   .container{
-    width: 90% !important;
+    width: 80% !important;
   }
   .row{
     flex-direction: column;
