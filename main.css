@@ -302,18 +302,26 @@ main .Work-experience-cards {
   .right {
     padding: 10px 0 !important;
   }
-  .right .example-project-text{
+  .right .example-project-text {
     left: 0;
     margin-top: 20px;
     order: 1;
   }
-  .right .example-project-image{
+  .right .example-project-image {
     order: 2;
     left: 0;
   }
-  
 }
-@media (max-width: 488px) {
+
+@media (max-width: 425px) {
+  .Work-experience {
+  background: #763cac;
+  background: radial-gradient(
+    circle,
+    rgba(118, 60, 172, 1) 0%,
+    rgba(140, 121, 184, 0) 25%
+  );
+}
   main .Work-experience-cards {
     grid-template-columns: auto;
   }
@@ -331,13 +339,21 @@ main .Work-experience-cards {
   .right {
     padding: 10px 0 !important;
   }
-  .right .example-project-text{
+  .right .example-project-text {
     left: 0;
     margin-top: 20px;
     order: 1;
   }
-  .right .example-project-image{
+  .right .example-project-image {
     order: 2;
     left: 0;
   }
+  .example-project-text .blur-card {
+  width: 369px;
+  font-size: 16px;
+}
+.example-project-image {
+  width: 369px;
+  right: 0;
+}
 }
