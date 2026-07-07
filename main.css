@@ -189,8 +189,8 @@ main .Work-experience-cards {
 }
 .example-content {
   margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  /* grid-template-columns: 2fr 1fr; */
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -200,6 +200,7 @@ main .Work-experience-cards {
   font-family: Poppins;
   width: 500px;
   position: relative;
+  left: 50px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -222,6 +223,7 @@ main .Work-experience-cards {
 .example-project-image {
   width: 582px;
   position: relative;
+  right: 50px;
   z-index: 1;
   background-color: #2b0b3a;
   border-radius: 10px;
@@ -257,10 +259,15 @@ main .Work-experience-cards {
   margin-top: 20px;
 }
 .right .example-content {
-  grid-template-columns: 1fr 2fr;
+  /* grid-template-columns: 1fr 2fr; */
+  display: flex;
 }
 .right .example-project-text {
   align-items: end;
+  left: -60px;
+}
+.right .example-project-image {
+  left: 60px;
 }
 .right .example-project-text {
   order: 2;
@@ -282,15 +289,55 @@ main .Work-experience-cards {
   .experience-card .experience-text a.btn {
     padding: 8px 16px;
   }
-   .logo-circle-box img{
+  .logo-circle-box img {
     width: 550px;
   }
+  .example-content {
+    flex-direction: column;
+  }
+  .example-project-text {
+    width: auto;
+    left: 0px;
+  }
+  .right {
+    padding: 10px 0 !important;
+  }
+  .right .example-project-text{
+    left: 0;
+    margin-top: 20px;
+    order: 1;
+  }
+  .right .example-project-image{
+    order: 2;
+    left: 0;
+  }
+  
 }
-@media (max-width: 425px) {
+@media (max-width: 488px) {
   main .Work-experience-cards {
     grid-template-columns: auto;
   }
-  .logo-circle-box img{
+  .logo-circle-box img {
     width: 350px;
+  }
+  .example-content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .example-project-text {
+    width: auto;
+    left: 0px;
+  }
+  .right {
+    padding: 10px 0 !important;
+  }
+  .right .example-project-text{
+    left: 0;
+    margin-top: 20px;
+    order: 1;
+  }
+  .right .example-project-image{
+    order: 2;
+    left: 0;
   }
 }
