@@ -68,6 +68,11 @@ main .Work-experience-cards {
   /* padding-bottom: 24px ; */
   border-radius: 10px;
 }
+.Work-experience-cards .experience-card:hover{
+  transform: translateY(-3.5%);
+  border-top: 2px solid #b28ad6;
+  transition: transform .9s;
+}
 .experience-card .experience-pic {
   padding: 20px 8px 17px 10px;
 }
@@ -103,6 +108,11 @@ main .Work-experience-cards {
   color: #fff;
   padding: 10px 23px 10px 10px;
   margin-top: 10px;
+
+}
+.Work-experience .experience-text .btn:hover{
+  box-shadow: 0 0 22px #693b93, 0 0 44px #2c1250;
+  transition: all .10s;
 }
 .join-the-taem {
   text-align: center;
@@ -142,6 +152,11 @@ main .Work-experience-cards {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.team-skills-box .team-skills>div:hover{
+  transform: scale(120%);
+  background-color: #53268d;
+  transition: all 0.7s;
 }
 .team-skills-box .team-skills .item::after {
   content: "";
