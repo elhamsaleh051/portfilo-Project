@@ -1,5 +1,6 @@
 @import url("style/header.css");
 @import url("style/banner.css");
+@import url("style/footer.css");
 @font-face {
   font-family: "Plus Jakarta Sans";
   src:
@@ -60,14 +61,25 @@ main .Work-experience-cards {
     rgba(38, 16, 69, 1) 70%,
     rgba(25, 6, 52, 1) 90%
   );
+  box-shadow: 4px 7px 26px 0 #0000001f;
   display: flex;
   align-items: center;
   border-top: 2px solid #693b93;
   /* padding-bottom: 24px ; */
   border-radius: 10px;
+  padding: 10px 4px;
+}
+.Work-experience-cards .experience-card:hover{
+  transform: translateY(-3.5%);
+  border-top: 2px solid #b28ad6;
+  transition: transform .9s;
 }
 .experience-card .experience-pic {
   padding: 20px 8px 17px 10px;
+}
+.experience-card .experience-pic img{
+  width: 100px;
+  padding: 15px;
 }
 .experience-card .experience-text {
   display: flex;
@@ -78,16 +90,16 @@ main .Work-experience-cards {
 }
 .experience-card .experience-text h5 {
   font-family: Poppins;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 32.5px;
   letter-spacing: 0%;
 }
 .experience-card .experience-text p {
   font-family: Poppins;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 10.5px;
+  line-height: 18.5px;
   letter-spacing: 0%;
 }
 .Work-experience .experience-text .btn {
@@ -101,6 +113,11 @@ main .Work-experience-cards {
   color: #fff;
   padding: 10px 23px 10px 10px;
   margin-top: 10px;
+
+}
+.Work-experience .experience-text .btn:hover{
+  box-shadow: 0 0 22px #693b93, 0 0 44px #2c1250;
+  transition: all .10s;
 }
 .join-the-taem {
   text-align: center;
@@ -140,6 +157,11 @@ main .Work-experience-cards {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.team-skills-box .team-skills>div:hover{
+  transform: scale(120%);
+  background-color: #53268d;
+  transition: all 0.7s;
 }
 .team-skills-box .team-skills .item::after {
   content: "";
@@ -187,8 +209,8 @@ main .Work-experience-cards {
 }
 .example-content {
   margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  /* grid-template-columns: 2fr 1fr; */
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -198,6 +220,7 @@ main .Work-experience-cards {
   font-family: Poppins;
   width: 500px;
   position: relative;
+  left: 50px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -220,6 +243,7 @@ main .Work-experience-cards {
 .example-project-image {
   width: 582px;
   position: relative;
+  right: 50px;
   z-index: 1;
   background-color: #2b0b3a;
   border-radius: 10px;
@@ -255,12 +279,101 @@ main .Work-experience-cards {
   margin-top: 20px;
 }
 .right .example-content {
-  grid-template-columns: 1fr 2fr;
+  /* grid-template-columns: 1fr 2fr; */
+  display: flex;
 }
 .right .example-project-text {
   align-items: end;
+  left: -60px;
+}
+.right .example-project-image {
+  left: 60px;
 }
 .right .example-project-text {
   order: 2;
   text-align: end;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-card .experience-pic img {
+    width: 80px;
+    margin: 5px;
+  }
+  .experience-card .experience-text h5 {
+    font-size: 18px;
+  }
+  .experience-card .experience-text p {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .experience-card .experience-text a.btn {
+    padding: 8px 16px;
+  }
+  .logo-circle-box img {
+    width: 550px;
+  }
+  .example-content {
+    flex-direction: column;
+  }
+  .example-project-text {
+    width: auto;
+    left: 0px;
+  }
+  .right {
+    padding: 10px 0 !important;
+  }
+  .right .example-project-text {
+    left: 0;
+    margin-top: 20px;
+    order: 1;
+  }
+  .right .example-project-image {
+    order: 2;
+    left: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .Work-experience {
+  background: #763cac;
+  background: radial-gradient(
+    circle,
+    rgba(118, 60, 172, 1) 0%,
+    rgba(140, 121, 184, 0) 25%
+  );
+}
+  main .Work-experience-cards {
+    grid-template-columns: auto;
+  }
+  .logo-circle-box img {
+    width: 350px;
+  }
+  .example-content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .example-project-text {
+    width: auto;
+    left: 0px;
+  }
+  .right {
+    padding: 10px 0 !important;
+  }
+  .right .example-project-text {
+    left: 0;
+    margin-top: 20px;
+    order: 1;
+  }
+  .right .example-project-image {
+    order: 2;
+    left: 0;
+  }
+  .example-project-text .blur-card {
+  width: 369px;
+  font-size: 16px;
+}
+.example-project-image {
+  width: 369px;
+  right: 0;
+}
 }

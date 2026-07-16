@@ -21,9 +21,8 @@
                             <img src="images/experiance-star.svg" alt="experiance-star">
                         </div>
                         <div class="experience-text">
-                            <h5>CIB on the Mobile</h5>
-                            <p>Take your client onboard seamlessly by our amazing
-                                tool of digital onboard process.
+                            <h5>Hamiran Hamrah Co</h5>
+                            <p>Website maintenance, support, and feature development.
                             </p>
                             <a href="#" class="btn">LEARN MORE</a>
                         </div>
@@ -33,9 +32,8 @@
                             <img src="images/experiance-light.svg" alt="experiance-light">
                         </div>
                         <div class="experience-text">
-                            <h5>CIB on the Mobile</h5>
-                            <p>Take your client onboard seamlessly by our amazing
-                                tool of digital onboard process.
+                            <h5>WordPress Development</h5>
+                            <p>Building responsive websites using WordPress and Elementor.
                             </p>
                             <a href="#" class="btn">LEARN MORE</a>
                         </div>
@@ -45,9 +43,8 @@
                             <img src="images/experiance-coffe.svg" alt="experiance-coffe">
                         </div>
                         <div class="experience-text">
-                            <h5>CIB on the Mobile</h5>
-                            <p>Take your client onboard seamlessly by our amazing
-                                tool of digital onboard process.
+                            <h5>Front-end Development</h5>
+                            <p>Creating responsive interfaces with HTML, CSS and JavaScript.
                             </p>
                             <a href="#" class="btn">LEARN MORE</a>
                         </div>
@@ -57,9 +54,8 @@
                             <img src="images/-experiance-picker.svg" alt="-experiance-picker">
                         </div>
                         <div class="experience-text">
-                            <h5>CIB on the Mobile</h5>
-                            <p>Take your client onboard seamlessly by our amazing
-                                tool of digital onboard process.
+                            <h5>Website Support</h5>
+                            <p>Bug fixing, performance optimization and ongoing maintenance.
                             </p>
                             <a href="#" class="btn">LEARN MORE</a>
                         </div>
@@ -111,8 +107,8 @@
                             recommended tracks based on your existing playlists and more.
                         </div>
                         <div class="flower-icon">
-                            <img src="images/icon-park-solid_click.svg" ></img>
-                            <img src="images/icon-park-solid_click.svg" ></img>
+                            <img src="images/icon-park-solid_click.svg"></img>
+                            <img src="images/icon-park-solid_click.svg"></img>
                         </div>
                     </div>
                     <div class="example-project-image">
@@ -132,8 +128,8 @@
                             recommended tracks based on your existing playlists and more.
                         </div>
                         <div class="flower-icon">
-                            <img src="images/icon-park-solid_click.svg" ></img>
-                            <img src="images/icon-park-solid_click.svg" ></img>
+                            <img src="images/icon-park-solid_click.svg"></img>
+                            <img src="images/icon-park-solid_click.svg"></img>
                         </div>
                     </div>
                     <div class="example-project-image">
@@ -141,18 +137,28 @@
                     </div>
                 </div>
             </section>
-            
         </div>
     </main>
 
+    <div id="footer"></div>
     <script>
         async function loadComponent(id, file) {
             const res = await fetch(`components/${file}`);
             const html = await res.text();
             document.getElementById(id).innerHTML = html;
         }
-        loadComponent('header', 'header.html');
-        loadComponent('banner', 'banner.html');
+       async function init() {
+           await loadComponent('header', 'header.html');
+           await loadComponent('banner', 'banner.html');
+           await loadComponent('footer', 'footer.html');
+            const humbergerBtn = document.getElementById('humbergerBtn');
+            const navMenu=document.getElementById('navMenu');
+           if(humbergerBtn){ humbergerBtn.addEventListener('click', () => {
+                humbergerBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });}
+        }
+        init()
     </script>
 </body>
 
