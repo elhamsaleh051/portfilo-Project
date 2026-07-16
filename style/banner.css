@@ -125,9 +125,9 @@
   font-size: 21px;
   letter-spacing: 2%;
 }
-.section-introduction .facebook {
+/* .section-introduction span {
   color: #1877f2;
-}
+} */
 .section-introduction .description {
   /* margin: 40px 0; */
   font-size: 22px;
@@ -141,7 +141,7 @@
     flex-direction: column;
   }
   .p2 {
-    font-size: 44px;
+    font-size: 40px;
     margin-bottom: 10px;
   }
   .speech_bubble {
@@ -150,20 +150,26 @@
   }
   .speech_bubble::before {
     top: 5px;
-    right: 50px;
+    right: 10px;
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 425px) {
   .container {
     width: 90% !important;
   }
   .speech_bubble {
-    top: 100px;
+    top: 110px;
     left: 120px;
   }
   .speech_bubble::before {
     top: 5px;
-    right: 50px;
+    right: 20px;
+  }
+  .p2{
+    font-size: 38px;
+  }
+  .p3{
+    line-height: 1.5;
   }
   .glow-bg {
     width: 295px;
@@ -171,5 +177,8 @@
   }
   .avatar-img {
     width: 190px;
+  }
+  .section-introduction h1{
+    font-size: 40px;
   }
 }
