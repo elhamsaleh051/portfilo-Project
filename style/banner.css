@@ -12,7 +12,6 @@
   position: relative;
 }
 .picture {
- 
   /* text-align: center;
   flex-direction: column;
   height: 100%; */
@@ -24,7 +23,7 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.glow-bg{
+.glow-bg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,26 +32,56 @@
   width: 385px;
   height: 431px;
 }
-.avatar-img{
+.avatar-img {
   position: relative;
   height: auto;
   width: 285px;
   z-index: 2;
+  animation: avatar 2s ease 0s 1 normal forwards;
 }
-.hilight{
-  color: #7127BA;
+.hilight {
+  color: #7127ba;
 }
-.speech_bubble{
+.speech_bubble {
   position: absolute;
   top: 160px;
   left: 320px;
   color: #fff;
+  /* display: none; */
+  animation: name 2s ease 1s 1 normal forwards;
 }
-.speech_bubble::before{
-  content: url('../images/Arrow.svg');
+.avatar-img:hover{
+  transform: scale(110%);
+  cursor: pointer;
+}
+@keyframes name{
+  0%{
+    transform: translatey(100px);
+    opacity: 0;
+
+  }
+   100%{
+    transform: translatey(0px);
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes avatar {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.speech_bubble::before {
+  content: url("../images/Arrow.svg");
   top: -10px;
   right: 200px;
-position: absolute;
+  position: absolute;
 }
 .text {
   color: #fff;
@@ -103,4 +132,44 @@ position: absolute;
   /* margin: 40px 0; */
   font-size: 22px;
   font-weight: 400;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 80% !important;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .p2 {
+    font-size: 44px;
+    margin-bottom: 10px;
+  }
+  .speech_bubble {
+    top: 100px;
+    left: 220px;
+  }
+  .speech_bubble::before {
+    top: 5px;
+    right: 50px;
+  }
+}
+@media (max-width: 412px) {
+  .container {
+    width: 90% !important;
+  }
+  .speech_bubble {
+    top: 100px;
+    left: 120px;
+  }
+  .speech_bubble::before {
+    top: 5px;
+    right: 50px;
+  }
+  .glow-bg {
+    width: 295px;
+    height: 341px;
+  }
+  .avatar-img {
+    width: 190px;
+  }
 }

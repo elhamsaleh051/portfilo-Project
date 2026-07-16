@@ -151,9 +151,18 @@
             const html = await res.text();
             document.getElementById(id).innerHTML = html;
         }
-        loadComponent('header', 'header.html');
-        loadComponent('banner', 'banner.html');
-        loadComponent('footer', 'footer.html');
+       async function init() {
+           await loadComponent('header', 'header.html');
+           await loadComponent('banner', 'banner.html');
+           await loadComponent('footer', 'footer.html');
+            const humbergerBtn = document.getElementById('humbergerBtn');
+            const navMenu=document.getElementById('navMenu');
+           if(humbergerBtn){ humbergerBtn.addEventListener('click', () => {
+                humbergerBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });}
+        }
+        init()
     </script>
 </body>
 
