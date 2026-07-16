@@ -44,7 +44,7 @@
 }
 .speech_bubble{
   position: absolute;
-  top: 180px;
+  top: 160px;
   left: 320px;
   color: #fff;
 }
@@ -71,7 +71,8 @@ position: absolute;
   line-height: 127%;
 }
 .p3 {
-  font-size: 11px;
+  margin-top: 15px;
+  font-size: 14px;
   line-height: 100%;
   letter-spacing: 2%;
 }
