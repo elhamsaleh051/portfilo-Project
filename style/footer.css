@@ -1,10 +1,9 @@
 .footer-content {
-  font-family: Preahvihear;
-  color: #fff;
-  font-weight: 400;
-  /* line-height: 100%; */
-  letter-spacing: 2%;
-  margin-bottom: 35px;
+    font-family: Preahvihear;
+    color: #fff;
+    font-weight: 400;
+    /* line-height: 100%; */
+    letter-spacing: 2%;
 }
 .footer-content h4 {
   font-size: 25px;
