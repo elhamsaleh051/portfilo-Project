@@ -67,6 +67,7 @@ main .Work-experience-cards {
   border-top: 2px solid #693b93;
   /* padding-bottom: 24px ; */
   border-radius: 10px;
+  padding: 10px 4px;
 }
 .Work-experience-cards .experience-card:hover{
   transform: translateY(-3.5%);
@@ -75,6 +76,10 @@ main .Work-experience-cards {
 }
 .experience-card .experience-pic {
   padding: 20px 8px 17px 10px;
+}
+.experience-card .experience-pic img{
+  width: 100px;
+  padding: 15px;
 }
 .experience-card .experience-text {
   display: flex;
@@ -85,16 +90,16 @@ main .Work-experience-cards {
 }
 .experience-card .experience-text h5 {
   font-family: Poppins;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 32.5px;
   letter-spacing: 0%;
 }
 .experience-card .experience-text p {
   font-family: Poppins;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 10.5px;
+  line-height: 18.5px;
   letter-spacing: 0%;
 }
 .Work-experience .experience-text .btn {
