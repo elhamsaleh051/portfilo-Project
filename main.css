@@ -42,14 +42,16 @@ body {
     rgba(118, 60, 172, 1) 0%,
     rgba(140, 121, 184, 0) 50%
   );
+  margin: 50px 0 70px 0;
 }
 .Work-experience h2 {
-  margin-bottom: 44px;
+  margin-bottom: 50px;
 }
 main .Work-experience-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  /* flex-wrap: wrap; */
+  gap: 30px;
 }
 .Work-experience-cards .experience-card {
   background: #130428;
@@ -69,15 +71,15 @@ main .Work-experience-cards {
   border-radius: 10px;
   padding: 10px 4px;
 }
-.Work-experience-cards .experience-card:hover{
+.Work-experience-cards .experience-card:hover {
   transform: translateY(-3.5%);
   border-top: 2px solid #b28ad6;
-  transition: transform .9s;
+  transition: transform 0.9s;
 }
 .experience-card .experience-pic {
   padding: 20px 8px 17px 10px;
 }
-.experience-card .experience-pic img{
+.experience-card .experience-pic img {
   width: 100px;
   padding: 15px;
 }
@@ -113,11 +115,12 @@ main .Work-experience-cards {
   color: #fff;
   padding: 10px 23px 10px 10px;
   margin-top: 10px;
-
 }
-.Work-experience .experience-text .btn:hover{
-  box-shadow: 0 0 22px #693b93, 0 0 44px #2c1250;
-  transition: all .10s;
+.Work-experience .experience-text .btn:hover {
+  box-shadow:
+    0 0 22px #693b93,
+    0 0 44px #2c1250;
+  transition: all 0.1s;
 }
 .join-the-taem {
   text-align: center;
@@ -158,7 +161,7 @@ main .Work-experience-cards {
   justify-content: center;
   position: relative;
 }
-.team-skills-box .team-skills>div:hover{
+.team-skills-box .team-skills > div:hover {
   transform: scale(120%);
   background-color: #53268d;
   transition: all 0.7s;
@@ -214,6 +217,7 @@ main .Work-experience-cards {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  
 }
 .example-project-text {
   color: #fdfdff;
@@ -295,6 +299,44 @@ main .Work-experience-cards {
 }
 /* Responsive */
 @media (max-width: 768px) {
+}
+
+/* Large Desktop */
+@media (max-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+  .logo-circle-box img {
+    width: 650px;
+    max-width: 580px;
+  }
+  .example-project-text{
+left: 90px;
+  }
+  .example-project-image {
+    width: 582px;
+    max-width: 482px;
+    position: relative;
+    right: 80px;
+    z-index: 1;
+    background-color: #2b0b3a;
+    border-radius: 10px;
+  }
+  .right .example-project-text {
+  align-items: end;
+  left: -90px;
+}
+.right .example-project-image {
+  left: 90px;
+}
+}
+
+/* Laptop */
+@media (max-width: 992px) {
+}
+
+/* Tablet */
+@media (max-width: 768px) {
   .experience-card .experience-pic img {
     width: 80px;
     margin: 5px;
@@ -314,6 +356,7 @@ main .Work-experience-cards {
   }
   .example-content {
     flex-direction: column;
+    flex-wrap: wrap;
   }
   .example-project-text {
     width: auto;
@@ -333,15 +376,16 @@ main .Work-experience-cards {
   }
 }
 
-@media (max-width: 425px) {
+/* Mobile */
+@media (max-width: 576px) {
   .Work-experience {
-  background: #763cac;
-  background: radial-gradient(
-    circle,
-    rgba(118, 60, 172, 1) 0%,
-    rgba(140, 121, 184, 0) 25%
-  );
-}
+    background: #763cac;
+    background: radial-gradient(
+      circle,
+      rgba(118, 60, 172, 1) 0%,
+      rgba(140, 121, 184, 0) 25%
+    );
+  }
   main .Work-experience-cards {
     grid-template-columns: auto;
   }
@@ -369,11 +413,78 @@ main .Work-experience-cards {
     left: 0;
   }
   .example-project-text .blur-card {
-  width: 369px;
-  font-size: 16px;
+    width: 369px;
+    font-size: 16px;
+  }
+  .example-project-image {
+    width: 369px;
+    right: 0;
+  }
 }
-.example-project-image {
-  width: 369px;
-  right: 0;
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .Work-experience {
+    background: #763cac;
+    background: radial-gradient(
+      circle,
+      rgba(118, 60, 172, 1) 0%,
+      rgba(140, 121, 184, 0) 25%
+    );
+  }
+  main .Work-experience-cards {
+    grid-template-columns: auto;
+  }
+  .logo-circle-box img {
+    width: 350px;
+    max-width: 300px;
+  }
+  .team-skills-box .team-skills .line1::after {
+  left: 30px;
 }
+.team-skills-box .team-skills .line2::after {
+  left: 25px;
+}
+.team-skills-box .team-skills .line3::after {
+  left: 25px;
+}
+.team-skills-box .team-skills .line4::after {
+  left: -15px;
+}
+.team-skills-box .team-skills .line5::after {
+  right: 25px;
+}
+.team-skills-box .team-skills .line6::after { 
+  right: 30px;
+}
+  .example-content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .example-project-text {
+    width: auto;
+    left: 0px;
+  }
+  .right {
+    padding: 10px 0 !important;
+  }
+  .right .example-project-text {
+    left: 0;
+    margin-top: 20px;
+    order: 1;
+  }
+  .right .example-project-image {
+    order: 2;
+    left: 0;
+  }
+  .example-project-text .blur-card {
+    width: 369px;
+    max-width: 300px;
+    font-size: 16px;
+  }
+  .example-project-image {
+    width: 369px;
+    max-width: 300px;
+    right: 0;
+  }
 }
